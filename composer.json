@@ -1,5 +1,5 @@
 {
-  "name": "goldencodeio/bitrix-restify",
+  "name": "drussaltos/bitrix-restify",
   "description": "1C-Bitrix REST API",
   "keywords": ["bitrix", "rest", "api", "rest-api"],
   "license": "MIT",
