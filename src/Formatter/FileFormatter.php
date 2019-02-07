@@ -28,7 +28,7 @@ class FileFormatter implements FormatterInterface {
 		if ($_SERVER['HTTP_HOST'] == 'bitrix.kosmoplus.com') {
 		  $protocol = 'https';
 		} else {
-		  $protocol = 'http';
+		  $protocol = $_SERVER['REQUEST_SCHEME'];
 		}
 
 		$file = [];
