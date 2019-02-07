@@ -29,12 +29,7 @@ class FileFormatter implements FormatterInterface {
 		foreach ($selectFields as $field)
 			$file[$field] = $rawFile[$field];
 		
-		// $file['SRC'] = $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'] . $file['SRC'];
-		
-		$protocol = $_SERVER['HTTP_ORIGIN'];
-		$str=strpos($protocol, ":");
-		$protocol=substr($protocol, 0, $str);
-		$file['SRC'] = $protocol . '://' . $_SERVER['HTTP_HOST'] . $file['SRC'];
+		$file['SRC'] = $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'] . $file['SRC'];
 
 		return $file;
 	}
