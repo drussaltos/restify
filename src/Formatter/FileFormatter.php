@@ -24,12 +24,20 @@ class FileFormatter implements FormatterInterface {
 			'ORIGINAL_NAME',
 			'DESCRIPTION'
 		];
+		
+		if ($_SERVER['HTTP_HOST'] == bitrix.kosmoplus.com) {
+		  $protocol = 'https';
+		} else {
+		  $protocol = 'http';
+		}
 
 		$file = [];
 		foreach ($selectFields as $field)
 			$file[$field] = $rawFile[$field];
 		
-		$file['SRC'] = $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'] . $file['SRC'];
+		//$file['SRC'] = $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'] . $file['SRC'];
+		$file['SRC'] = $protocol . '://' . $_SERVER['HTTP_HOST'] . $file['SRC'];
+		
 
 		return $file;
 	}
