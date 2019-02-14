@@ -19,7 +19,7 @@
   },
   "autoload": {
     "psr-4": {
-      "goldencode\\Bitrix\\Restify\\": "src/"
+      "drussaltos\\Bitrix\\Restify\\": "src/"
     }
   }
 }
