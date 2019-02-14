@@ -14,5 +14,5 @@ Rest API для 1С-Битрикс
 ### Установка
 
 ```bash
-composer require goldencodeio/bitrix-restify
+composer require drussaltos/bitrix-restify
 ```
